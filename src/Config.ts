@@ -43,6 +43,7 @@ export class Config {
 			},
 			SUBSTRATE: {
 				WS_URL: config.Get(MODULES.SUBSTRATE, CONFIG.WS_URL) as string,
+				WS_AUTHORIZATION: config.Get(MODULES.SUBSTRATE, CONFIG.WS_AUTHORIZATION) as string,
 				CUSTOM_TYPES: configTypes[CONFIG.CUSTOM_TYPES],
 			},
 			LOG: {

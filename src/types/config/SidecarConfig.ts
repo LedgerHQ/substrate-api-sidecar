@@ -7,8 +7,9 @@ export interface ISidecarConfig {
 	LOG: ISidecarConfigLog;
 }
 
-interface ISidecarConfigSubstrate {
+export interface ISidecarConfigSubstrate {
 	WS_URL: string;
+	WS_AUTHORIZATION: string;
 	CUSTOM_TYPES: Record<string, string> | undefined;
 }
 

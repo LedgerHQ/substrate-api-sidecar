@@ -15,10 +15,9 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-import { ApiPromise } from '@polkadot/api';
-import { WsProvider } from '@polkadot/rpc-provider';
 import { json } from 'express';
 
+import { createApi } from './Api';
 import App from './App';
 import { Config } from './Config';
 import * as controllers from './controllers';
@@ -28,31 +27,13 @@ import * as middleware from './middleware';
 
 async function main() {
 	const { config } = Config;
-
 	const { logger } = Log;
 
 	// Overide console.{log, error, warn, etc}
 	consoleOverride(logger);
 
 	// Instantiate a web socket connection to the node for basic polkadot-js use
-	const api = await ApiPromise.create({
-		provider: new WsProvider(config.SUBSTRATE.WS_URL),
-		types: {
-			...config.SUBSTRATE.CUSTOM_TYPES,
-		},
-	});
-
-	// Gather some basic details about the node so we can display a nice message
-	const [chainName, { implName }] = await Promise.all([
-		api.rpc.system.chain(),
-		api.rpc.state.getRuntimeVersion(),
-	]);
-
-	logger.info(
-		`Connected to chain ${chainName.toString()} on the ${implName.toString()} client at ${
-			config.SUBSTRATE.WS_URL
-		}`
-	);
+	const api = await createApi(config.SUBSTRATE);
 
 	// Instantiate v0 controllers (note these will be removed upon the release of v1.0.0)
 	const claimsController = new controllers.v0.v0Claims(api);

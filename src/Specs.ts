@@ -77,6 +77,18 @@ export class Specs {
 				regexp: /^wss?:\/\/.*(:\d{4,5})?$/,
 			})
 		);
+
+		this._specs.appendSpec(
+			MODULES.SUBSTRATE,
+			this._specs.getSpec(
+				CONFIG.WS_AUTHORIZATION,
+				'Websocket Authorization header',
+				{
+					default: '',
+					mandatory: false,
+				}
+			)
+		);
 	}
 
 	/**
