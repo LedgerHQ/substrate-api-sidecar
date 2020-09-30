@@ -1,6 +1,7 @@
 import {
 	AccountsAssets,
 	AccountsBalanceInfo,
+	AccountsIdentity,
 	AccountsStakingInfo,
 	AccountsStakingPayouts,
 	AccountsVestingInfo,
@@ -30,6 +31,7 @@ export const controllers = {
 	BlocksTrace,
 	AccountsAssets,
 	AccountsBalanceInfo,
+	AccountsIdentity,
 	AccountsStakingInfo,
 	AccountsVestingInfo,
 	AccountsStakingPayouts,
