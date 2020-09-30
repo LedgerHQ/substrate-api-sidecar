@@ -8,6 +8,7 @@ import { getBlockWeight } from './metadata-consts';
 export const kusamaControllers: ControllerConfig = {
 	controllers: [
 		'AccountsBalanceInfo',
+		'AccountsIdentity',
 		'AccountsStakingInfo',
 		'AccountsStakingPayouts',
 		'AccountsValidate',
