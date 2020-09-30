@@ -26,6 +26,7 @@ export * from './Block';
 export * from './EraPayouts';
 export * from './Extrinsic';
 export * from './FrameMethod';
+export * from './Identity';
 export * from './MetadataCode';
 export * from './NodeNetwork';
 export * from './NodeTransactionPool';
