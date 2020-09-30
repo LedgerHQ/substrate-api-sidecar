@@ -56,7 +56,7 @@ import {
 	TransactionMaterial,
 	TransactionSubmit,
 } from './transaction';
-
+import { Validators } from './validators';
 /**
  * Object containing every controller class definition.
  */
@@ -100,4 +100,5 @@ export const controllers = {
 	TransactionMaterial,
 	TransactionSubmit,
 	Paras,
+	Validators,
 };
