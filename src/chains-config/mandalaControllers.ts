@@ -28,6 +28,7 @@ export const mandalaControllers: ControllerConfig = {
 		'TransactionFeeEstimate',
 		'TransactionMaterial',
 		'TransactionSubmit',
+		'Validators',
 	],
 	options: {
 		finalizes: true,
