@@ -29,6 +29,7 @@ export const defaultControllers: ControllerConfig = {
 		'TransactionFeeEstimate',
 		'TransactionMaterial',
 		'TransactionSubmit',
+		'Validators',
 	],
 	options: {
 		finalizes: true,
