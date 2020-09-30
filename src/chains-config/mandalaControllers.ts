@@ -23,6 +23,7 @@ import { initLRUCache } from './cache/lruCache';
 export const mandalaControllers: ControllerConfig = {
 	controllers: [
 		'AccountsBalanceInfo',
+		'AccountsIdentity',
 		'AccountsStakingInfo',
 		'AccountsStakingPayouts',
 		'AccountsValidate',
