@@ -71,6 +71,7 @@ async function main() {
 			new controllers.AccountsBalanceInfo(api),
 			new controllers.AccountsStakingInfo(api),
 			new controllers.AccountsVestingInfo(api),
+			new controllers.AccountsIdentity(api),
 			new controllers.NodeNetwork(api),
 			new controllers.NodeVersion(api),
 			new controllers.NodeTransactionPool(api),
