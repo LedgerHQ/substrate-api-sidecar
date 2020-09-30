@@ -28,3 +28,4 @@ export * from './SanitizedEvent';
 export * from './SanitizedStorageItemMetadata';
 export * from './TransactionDryRun';
 export * from './TransactionMaterial';
+export * from './Validator';
