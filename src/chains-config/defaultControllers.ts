@@ -25,6 +25,7 @@ export const defaultControllers: ControllerConfig = {
 	controllers: [
 		'AccountsAssets',
 		'AccountsBalanceInfo',
+		'AccountsIdentity',
 		'AccountsProxyInfo',
 		'AccountsStakingInfo',
 		'AccountsStakingPayouts',
