@@ -84,6 +84,7 @@ async function main() {
 			new controllers.TransactionSubmit(api),
 			new controllers.palletsStakingProgress(api),
 			new controllers.palletsStorageItem(api),
+			new controllers.Validators(api),
 			...v0Controllers,
 		],
 		postMiddleware: [

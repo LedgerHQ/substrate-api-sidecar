@@ -4,4 +4,5 @@ export * from './pallets';
 export * from './transaction';
 export * from './runtime';
 export * from './node';
+export * from './validators';
 export * from './identities';

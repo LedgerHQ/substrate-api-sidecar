@@ -20,4 +20,5 @@ export * from './NodeTransactionPool';
 export * from './TransactionDryRun';
 export * from './FrameMethod';
 export * from './SanitizedStorageItemMetadata';
+export * from './Validator';
 export * from './Identity';
