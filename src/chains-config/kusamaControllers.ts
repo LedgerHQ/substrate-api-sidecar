@@ -7,6 +7,7 @@ import { initLRUCache } from './cache/lruCache';
 export const kusamaControllers: ControllerConfig = {
 	controllers: [
 		'AccountsBalanceInfo',
+		'AccountsIdentity',
 		'AccountsStakingInfo',
 		'AccountsStakingPayouts',
 		'AccountsValidate',
