@@ -25,6 +25,7 @@ export const polkadotControllers: ControllerConfig = {
 		'AccountsBalanceInfo',
 		'AccountsConvert',
 		'AccountsProxyInfo',
+		'AccountsIdentity',
 		'AccountsStakingInfo',
 		'AccountsStakingPayouts',
 		'AccountsValidate',

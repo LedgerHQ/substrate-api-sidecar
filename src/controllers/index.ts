@@ -20,6 +20,7 @@ import {
 	AccountsConvert,
 	AccountsPoolAssets,
 	AccountsProxyInfo,
+	AccountsIdentity,
 	AccountsStakingInfo,
 	AccountsStakingPayouts,
 	AccountsValidate,
@@ -57,8 +58,12 @@ export const controllers = {
 	AccountsAssets,
 	AccountsBalanceInfo,
 	AccountsConvert,
+<<<<<<< HEAD
 	AccountsPoolAssets,
 	AccountsProxyInfo,
+=======
+	AccountsIdentity,
+>>>>>>> feat: add IdentityService and AccountsIdentityController
 	AccountsStakingInfo,
 	AccountsValidate,
 	AccountsVestingInfo,
