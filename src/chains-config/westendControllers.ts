@@ -7,6 +7,7 @@ import { getBlockWeight } from './metadata-consts';
 export const westendControllers: ControllerConfig = {
 	controllers: [
 		'AccountsBalanceInfo',
+		'AccountsIdentity',
 		'AccountsStakingInfo',
 		'AccountsStakingPayouts',
 		'AccountsVestingInfo',
