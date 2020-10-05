@@ -20,7 +20,10 @@ export class ValidatorsService extends AbstractService {
 	/**
 	 * Fetch the list of all validators
 	 */
-	async fetchValidatorsList(): Promise<IValidator[]> {
+	async fetchValidatorsList(
+		addresses?: AccountId[],
+		detailed: Boolean = false
+	): Promise<IValidator[]> {
 		const { api } = this;
 
 		const [activeOpt, stashes, elected, nextElected] = await Promise.all([
@@ -41,7 +44,7 @@ export class ValidatorsService extends AbstractService {
 
 		const rewards = await this.fetchRewardsPoints(activeEra);
 
-		const stashIds = elected;
+		const stashIds = addresses || elected;
 
 		const [validators, identities] = await Promise.all([
 			api.derive.staking.accounts(stashIds),
@@ -49,7 +52,13 @@ export class ValidatorsService extends AbstractService {
 		]);
 
 		return validators.map((validator, index) =>
-			this.formatValidator(validator, identities[index], rewards, elected)
+			this.formatValidator(
+				validator,
+				identities[index],
+				rewards,
+				elected,
+				detailed
+			)
 		);
 	}
 

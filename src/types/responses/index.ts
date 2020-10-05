@@ -22,3 +22,4 @@ export * from './FrameMethod';
 export * from './SanitizedStorageItemMetadata';
 export * from './Validator';
 export * from './Identity';
+export * from './Nominations';

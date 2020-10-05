@@ -1,4 +1,4 @@
-import { Compact, Vec } from '@polkadot/types';
+import { Compact } from '@polkadot/types';
 import {
 	AccountId,
 	Balance,
@@ -17,7 +17,7 @@ export interface IValidator {
 	own: Compact<Balance>;
 	total: Compact<Balance>;
 	nominatorsCount: number;
-	nominators?: Vec<IndividualExposure>;
+	nominators?: IndividualExposure[];
 	commission: Compact<Perbill>;
 	redeemable: Balance | undefined;
 	rewardsPoints: RewardPoint | null;
