@@ -14,7 +14,12 @@ import {
 	PalletsStorage,
 } from './pallets';
 import { Paras } from './paras';
-import { RuntimeCode, RuntimeMetadata, RuntimeSpec } from './runtime';
+import {
+	RuntimeCode,
+	RuntimeConstants,
+	RuntimeMetadata,
+	RuntimeSpec,
+} from './runtime';
 import {
 	TransactionDryRun,
 	TransactionFeeEstimate,
@@ -42,6 +47,7 @@ export const controllers = {
 	NodeTransactionPool,
 	NodeVersion,
 	RuntimeCode,
+	RuntimeConstants,
 	RuntimeMetadata,
 	RuntimeSpec,
 	TransactionDryRun,
