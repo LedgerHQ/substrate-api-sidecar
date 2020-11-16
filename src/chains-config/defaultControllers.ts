@@ -24,6 +24,7 @@ export const defaultControllers: ControllerConfig = {
 		'PalletsStorage',
 		'Paras',
 		'RuntimeCode',
+		'RuntimeConstants',
 		'RuntimeMetadata',
 		'RuntimeSpec',
 		'TransactionDryRun',
