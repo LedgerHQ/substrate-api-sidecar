@@ -22,6 +22,7 @@ export const polkadotControllers: ControllerConfig = {
 		'PalletsStorage',
 		'Paras',
 		'RuntimeCode',
+		'RuntimeConstants',
 		'RuntimeMetadata',
 		'RuntimeSpec',
 		'TransactionDryRun',
