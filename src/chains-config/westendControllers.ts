@@ -21,6 +21,7 @@ export const westendControllers: ControllerConfig = {
 		'PalletsStorage',
 		'Paras',
 		'RuntimeCode',
+		'RuntimeConstants',
 		'RuntimeMetadata',
 		'RuntimeSpec',
 		'TransactionDryRun',
