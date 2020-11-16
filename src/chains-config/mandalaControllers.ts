@@ -38,6 +38,7 @@ export const mandalaControllers: ControllerConfig = {
 		'PalletsStorage',
 		'Paras',
 		'RuntimeCode',
+		'RuntimeConstants',
 		'RuntimeMetadata',
 		'RuntimeSpec',
 		'TransactionDryRun',
