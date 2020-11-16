@@ -14,6 +14,7 @@ export const dockMainnetControllers: ControllerConfig = {
 		'NodeVersion',
 		'PalletsStorage',
 		'RuntimeCode',
+		'RuntimeConstants',
 		'RuntimeMetadata',
 		'RuntimeSpec',
 		'TransactionDryRun',
