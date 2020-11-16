@@ -2,6 +2,7 @@ export * from './At';
 export * from './PalletStakingProgress';
 export * from './SanitizedCall';
 export * from './Block';
+export * from './Constants';
 export * from './SanitizedEvent';
 export * from './SanitizedArgs';
 export * from './AccountBalanceInfo';
