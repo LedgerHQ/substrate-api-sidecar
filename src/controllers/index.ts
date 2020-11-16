@@ -44,8 +44,18 @@ import {
 	PalletsStorage,
 } from './pallets';
 import { Paras } from './paras';
-import { RuntimeCode, RuntimeMetadata, RuntimeSpec } from './runtime';
-import { TransactionDryRun, TransactionFeeEstimate, TransactionMaterial, TransactionSubmit } from './transaction';
+import {
+	RuntimeCode,
+	RuntimeConstants,
+	RuntimeMetadata,
+	RuntimeSpec,
+} from './runtime';
+import {
+	TransactionDryRun,
+	TransactionFeeEstimate,
+	TransactionMaterial,
+	TransactionSubmit,
+} from './transaction';
 
 /**
  * Object containing every controller class definition.
@@ -58,12 +68,9 @@ export const controllers = {
 	AccountsAssets,
 	AccountsBalanceInfo,
 	AccountsConvert,
-<<<<<<< HEAD
 	AccountsPoolAssets,
 	AccountsProxyInfo,
-=======
 	AccountsIdentity,
->>>>>>> feat: add IdentityService and AccountsIdentityController
 	AccountsStakingInfo,
 	AccountsValidate,
 	AccountsVestingInfo,
@@ -85,6 +92,7 @@ export const controllers = {
 	NodeTransactionPool,
 	NodeVersion,
 	RuntimeCode,
+	RuntimeConstants,
 	RuntimeMetadata,
 	RuntimeSpec,
 	TransactionDryRun,
