@@ -19,6 +19,7 @@ export * from './AccountsBalanceInfoService';
 export * from './AccountsConvertService';
 export * from './AccountsPoolAssetsService';
 export * from './AccountsProxyInfoService';
+export * from './AccountsNominationsService';
 export * from './AccountsStakingInfoService';
 export * from './AccountsStakingPayoutsService';
 export * from './AccountsValidateService';

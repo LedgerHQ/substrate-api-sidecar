@@ -26,6 +26,7 @@ export const westendControllers: ControllerConfig = {
 		'AccountsConvert',
 		'AccountsProxyInfo',
 		'AccountsIdentity',
+		'AccountsNominations',
 		'AccountsStakingInfo',
 		'AccountsStakingPayouts',
 		'AccountsValidate',

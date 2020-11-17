@@ -20,6 +20,7 @@ export { default as AccountsConvert } from './AccountsConvertController';
 export { default as AccountsPoolAssets } from './AccountsPoolAssetsController';
 export { default as AccountsProxyInfo } from './AccountsProxyInfoController';
 export { default as AccountsIdentity } from './AccountsIdentityController';
+export { default as AccountsNominations } from './AccountsNominationsController';
 export { default as AccountsStakingInfo } from './AccountsStakingInfoController';
 export { default as AccountsStakingPayouts } from './AccountsStakingPayoutsController';
 export { default as AccountsValidate } from './AccountsValidateController';
