@@ -25,6 +25,7 @@ export const kusamaControllers: ControllerConfig = {
 		'AccountsBalanceInfo',
 		'AccountsConvert',
 		'AccountsIdentity',
+		'AccountsNominations',
 		'AccountsStakingInfo',
 		'AccountsStakingPayouts',
 		'AccountsValidate',
