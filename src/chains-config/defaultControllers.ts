@@ -9,6 +9,7 @@ export const defaultControllers: ControllerConfig = {
 		'AccountsAssets',
 		'AccountsBalanceInfo',
 		'AccountsIdentity',
+		'AccountsNominations',
 		'AccountsStakingInfo',
 		'AccountsStakingPayouts',
 		'AccountsVestingInfo',
