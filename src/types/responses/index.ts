@@ -32,6 +32,7 @@ export * from './MetadataCode';
 export * from './NodeNetwork';
 export * from './NodeTransactionPool';
 export * from './NodeVersion';
+export * from './Nominations';
 export * from './Pallet';
 export * from './PalletConstants';
 export * from './PalletConstantsItem';
