@@ -1490,6 +1490,7 @@ __metadata:
     "@substrate/calc": ^0.2.0
     "@substrate/dev": ^0.5.2
     "@types/argparse": ^2.0.8
+    "@types/cors": ^2.8.9
     "@types/express": ^4.17.11
     "@types/express-serve-static-core": ^4.17.19
     "@types/http-errors": ^1.8.0
@@ -1499,6 +1500,7 @@ __metadata:
     "@types/triple-beam": ^1.3.2
     argparse: ^2.0.1
     confmgr: ^1.0.6
+    cors: ^2.8.5
     express: ^4.17.1
     express-winston: ^4.1.0
     http-errors: ^1.8.0
@@ -1626,6 +1628,13 @@ __metadata:
   dependencies:
     "@types/node": "*"
   checksum: 6f712a0408ed119a42037bcbc38c12e053d3ffe11337221a3966c9e29a21c8455e331fe2116c426361c0b2c0e44cb3fb1f83594326e42ba34ce4723d726b7d30
+  languageName: node
+  linkType: hard
+
+"@types/cors@npm:^2.8.9":
+  version: 2.8.10
+  resolution: "@types/cors@npm:2.8.10"
+  checksum: c3f3d6feee59ff75127fec3030d55c3d5f1adfc07953facdae67c47dcd54c83c46a5e92f08afa53542ec978da38a388697d30731019798cb157c9e96c64ef6c3
   languageName: node
   linkType: hard
 
@@ -3367,6 +3376,16 @@ __metadata:
   version: 1.0.2
   resolution: "core-util-is@npm:1.0.2"
   checksum: 089015ee3c462dfceba70faa1df83b42a7bb35db26dae6af283247b06fe3216c65fccd9f00eebcaf98300dc31e981d56aae9f90b624f8f6ff1153e235ff88b65
+  languageName: node
+  linkType: hard
+
+"cors@npm:^2.8.5":
+  version: 2.8.5
+  resolution: "cors@npm:2.8.5"
+  dependencies:
+    object-assign: ^4
+    vary: ^1
+  checksum: c83e88c15428b87ff55853ec5ce961b650c7aa3de536aadebbeb2334872d86a8be57165a77996f3b746366c950c2d51624a9b76b88fb7f18d178eca051ca1ae2
   languageName: node
   linkType: hard
 
@@ -7284,7 +7303,7 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
-"object-assign@npm:^4.0.1, object-assign@npm:^4.1.0":
+"object-assign@npm:^4, object-assign@npm:^4.0.1, object-assign@npm:^4.1.0":
   version: 4.1.1
   resolution: "object-assign@npm:4.1.1"
   checksum: 66cf021898fc1b13ea573ea8635fbd5a76533f50cecbc2fcd5eee1e8029af41bcebe7023788b6d0e06cbe4401ecea075d972f78ec74467cdc571a0f1a4d1a081
@@ -9767,7 +9786,7 @@ typescript@^4.2.4:
   languageName: node
   linkType: hard
 
-"vary@npm:~1.1.2":
+"vary@npm:^1, vary@npm:~1.1.2":
   version: 1.1.2
   resolution: "vary@npm:1.1.2"
   checksum: 591f059f727ac1ba0d97cb7767f8583a03fcbb07db7be2b7dce838ede520ec0e958a41cb19077054769077fdc49a9b9a2dc391c83426bfee89c054b8cc7404bf
