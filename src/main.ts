@@ -69,7 +69,7 @@ async function main() {
 	const preMiddlewares = [
         cors() as RequestHandler,
         json(),
-        middleware.httpLoggerCreate(logger),
+        middleware.httpLoggerCreate(logger)
     ];
 
 	if (args.prometheus) {
