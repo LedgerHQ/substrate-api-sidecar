@@ -92,7 +92,7 @@ export class IdentitiesService extends AbstractService {
 			uniqAddresses
 		);
 
-		const map = new Map<String, Option<ITuple<[Registration, Option<Bytes>]>>>(
+		const map = new Map<String, Option<Registration>>(
 			addresses.map((addr, index) => [addr.toString(), parentIdentities[index]])
 		);
 
