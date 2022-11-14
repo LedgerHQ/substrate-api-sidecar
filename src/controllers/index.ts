@@ -17,6 +17,8 @@
 import {
 	AccountsAssets,
 	AccountsBalanceInfo,
+	AccountsIdentity,
+	AccountsNominations,
 	AccountsConvert,
 	AccountsStakingInfo,
 	AccountsStakingPayouts,
@@ -31,14 +33,19 @@ import {
 	PalletsStorage,
 } from './pallets';
 import { Paras } from './paras';
-import { RuntimeCode, RuntimeMetadata, RuntimeSpec } from './runtime';
+import {
+	RuntimeCode,
+	RuntimeConstants,
+	RuntimeMetadata,
+	RuntimeSpec,
+} from './runtime';
 import {
 	TransactionDryRun,
 	TransactionFeeEstimate,
 	TransactionMaterial,
 	TransactionSubmit,
 } from './transaction';
-
+import { Validators } from './validators';
 /**
  * Object containing every controller class definition.
  */
@@ -48,6 +55,8 @@ export const controllers = {
 	BlocksTrace,
 	AccountsAssets,
 	AccountsBalanceInfo,
+	AccountsIdentity,
+	AccountsNominations,
 	AccountsConvert,
 	AccountsStakingInfo,
 	AccountsValidate,
@@ -60,6 +69,7 @@ export const controllers = {
 	NodeTransactionPool,
 	NodeVersion,
 	RuntimeCode,
+	RuntimeConstants,
 	RuntimeMetadata,
 	RuntimeSpec,
 	TransactionDryRun,
@@ -67,4 +77,5 @@ export const controllers = {
 	TransactionMaterial,
 	TransactionSubmit,
 	Paras,
+	Validators,
 };

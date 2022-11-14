@@ -23,6 +23,8 @@ import { initLRUCache, QueryFeeDetailsCache } from './cache';
 export const polkadotControllers: ControllerConfig = {
 	controllers: [
 		'AccountsBalanceInfo',
+		'AccountsIdentity',
+		'AccountsNominations',
 		'AccountsConvert',
 		'AccountsStakingInfo',
 		'AccountsStakingPayouts',
@@ -38,12 +40,14 @@ export const polkadotControllers: ControllerConfig = {
 		'PalletsStorage',
 		'Paras',
 		'RuntimeCode',
+		'RuntimeConstants',
 		'RuntimeMetadata',
 		'RuntimeSpec',
 		'TransactionDryRun',
 		'TransactionFeeEstimate',
 		'TransactionMaterial',
 		'TransactionSubmit',
+		'Validators',
 	],
 	options: {
 		finalizes: true,

@@ -23,6 +23,8 @@ import { initLRUCache, QueryFeeDetailsCache } from './cache';
 export const westendControllers: ControllerConfig = {
 	controllers: [
 		'AccountsBalanceInfo',
+		'AccountsIdentity',
+		'AccountsNominations',
 		'AccountsConvert',
 		'AccountsStakingInfo',
 		'AccountsStakingPayouts',
@@ -37,12 +39,14 @@ export const westendControllers: ControllerConfig = {
 		'PalletsStorage',
 		'Paras',
 		'RuntimeCode',
+		'RuntimeConstants',
 		'RuntimeMetadata',
 		'RuntimeSpec',
 		'TransactionDryRun',
 		'TransactionFeeEstimate',
 		'TransactionMaterial',
 		'TransactionSubmit',
+		'Validators',
 	],
 	options: {
 		finalizes: true,
