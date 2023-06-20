@@ -66,4 +66,3 @@ export * from './SanitizedStorageItemMetadata';
 export * from './TransactionDryRun';
 export * from './TransactionMaterial';
 export * from './ValidateAddress';
-export * from './Validator';

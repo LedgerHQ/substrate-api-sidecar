@@ -3,7 +3,8 @@ import { DeriveStakingQuery } from '@polkadot/api-derive/types';
 import { AccountId, EraIndex, RewardPoint } from '@polkadot/types/interfaces';
 import { BadRequest } from 'http-errors';
 import LRU from 'lru-cache';
-import { IIdentity, IValidator } from 'src/types/responses';
+import { IValidator } from 'src/types/responses/Validator';
+import { IIdentity } from 'src/types/responses';
 
 import { AbstractService } from '../AbstractService';
 import { IdentitiesService } from '../identities';
