@@ -2,7 +2,7 @@ import { ApiPromise } from '@polkadot/api';
 import { DeriveStakingQuery } from '@polkadot/api-derive/types';
 import { AccountId, EraIndex, RewardPoint } from '@polkadot/types/interfaces';
 import { BadRequest } from 'http-errors';
-import LRU from 'lru-cache';
+import { LRUCache } from 'lru-cache';
 import { IValidator } from 'src/types/responses/Validator';
 import { IIdentity } from 'src/types/responses';
 
@@ -15,7 +15,7 @@ const QUERY_OPTS = {
 	withPrefs: true,
 };
 
-const validatorsCache = new LRU<string, Promise<IValidator[]>>({
+const validatorsCache = new LRUCache<string, Promise<IValidator[]>>({
 	max: 10,
 	ttl: 1000 * 60 * 60,
 });
@@ -196,15 +196,15 @@ export class ValidatorsService extends AbstractService {
 			accountId: validator.accountId,
 			controllerId: validator.controllerId,
 			identity,
-			own: validator.exposure.own,
-			total: validator.exposure.total,
-			nominatorsCount: validator.exposure.others.length,
-			nominators: detailed ? validator.exposure.others : undefined,
+			own: validator.exposureEraStakers.own,
+			total: validator.exposureEraStakers.total,
+			nominatorsCount: validator.exposureEraStakers.others.length,
+			nominators: detailed ? validator.exposureEraStakers.others : undefined,
 			commission: validator.validatorPrefs.commission,
 			rewardsPoints: rewards.get(validatorId) || null,
 			isElected: electedIds.includes(validatorId),
 			isOversubscribed: maxNominatorRewardedPerValidator
-				? validator.exposure.others.length >
+				? validator.exposureEraStakers.others.length >
 				  Number(maxNominatorRewardedPerValidator)
 				: false,
 		};

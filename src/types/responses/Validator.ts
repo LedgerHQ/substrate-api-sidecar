@@ -1,7 +1,6 @@
-import { Compact } from '@polkadot/types';
+import { Compact, u128 } from '@polkadot/types';
 import {
 	AccountId,
-	Balance,
 	IndividualExposure,
 	Perbill,
 	RewardPoint,
@@ -14,8 +13,8 @@ export interface IValidator {
 	accountId: AccountId;
 	controllerId?: AccountId | null;
 	identity: IIdentity;
-	own: Compact<Balance>;
-	total: Compact<Balance>;
+	own: Compact<u128>;
+	total: Compact<u128>;
 	nominatorsCount: number;
 	nominators?: IndividualExposure[];
 	commission: Compact<Perbill>;

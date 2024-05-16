@@ -1,4 +1,4 @@
-import { Data, Option } from '@polkadot/types';
+import { Bytes, Data, Option } from '@polkadot/types';
 import { AccountId, Registration } from '@polkadot/types/interfaces';
 import { ITuple } from '@polkadot/types/types';
 import { u8aToString } from '@polkadot/util';
@@ -53,7 +53,9 @@ export class IdentitiesService extends AbstractService {
 		const { api } = this;
 
 		const [identities, superOfOpts] = await Promise.all([
-			api.query.identity.identityOf.multi<Option<Registration>>(addresses),
+			api.query.identity.identityOf.multi<
+				Option<ITuple<[Registration, Option<Bytes>]>>
+			>(addresses),
 			api.query.identity.superOf.multi<Option<ITuple<[AccountId, Data]>>>(
 				addresses
 			),
@@ -79,18 +81,18 @@ export class IdentitiesService extends AbstractService {
 	 */
 	private async fetchParentIdentityMap(
 		unwrappedSuperOfs: (ITuple<[AccountId, Data]> | undefined)[]
-	): Promise<Map<String, Option<Registration>>> {
+	): Promise<Map<String, Option<ITuple<[Registration, Option<Bytes>]>>>> {
 		const addresses = unwrappedSuperOfs
 			.map((superOf) => superOf && superOf[0])
 			.filter(Boolean) as AccountId[]; // Remove undefineds
 
 		const uniqAddresses = [...new Set(addresses)]; // Avoid querying the same address multiple times
 
-		const parentIdentities = await this.api.query.identity.identityOf.multi<
-			Option<Registration>
-		>(uniqAddresses);
+		const parentIdentities = await this.api.query.identity.identityOf.multi(
+			uniqAddresses
+		);
 
-		const map = new Map<String, Option<Registration>>(
+		const map = new Map<String, Option<ITuple<[Registration, Option<Bytes>]>>>(
 			addresses.map((addr, index) => [addr.toString(), parentIdentities[index]])
 		);
 
@@ -106,9 +108,12 @@ export class IdentitiesService extends AbstractService {
 	 * @source https://github.com/polkadot-js/api/blob/master/packages/api-derive/src/accounts/info.ts
 	 */
 	private extractIdentity(
-		identityOfOpt?: Option<Registration>,
+		identityOfOpt?: Option<ITuple<[Registration, Option<Bytes>]>>,
 		superOf?: ITuple<[AccountId, Data]>,
-		parentIdentities?: Map<String, Option<Registration>>
+		parentIdentities?: Map<
+			String,
+			Option<ITuple<[Registration, Option<Bytes>]>>
+		>
 	): IIdentity {
 		// Choose best identity, parent identity as a fallback if any.
 		const identity = identityOfOpt?.isSome
@@ -121,7 +126,7 @@ export class IdentitiesService extends AbstractService {
 			return null;
 		}
 
-		const { info, judgements } = identity.unwrap();
+		const { info, judgements } = identity.unwrap()[0];
 		const topDisplay = dataAsString(info.display);
 
 		return {
