@@ -399,12 +399,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:7.20.13":
-  version: 7.20.13
-  resolution: "@babel/runtime@npm:7.20.13"
+"@babel/runtime@npm:7.25.0":
+  version: 7.25.0
+  resolution: "@babel/runtime@npm:7.25.0"
   dependencies:
-    regenerator-runtime: "npm:^0.13.11"
-  checksum: 10/7a2f4d8d2ed40ea9fa70c1debc94c9ca1afa86f2cad851eb040489c1f46c1233779e5f25fda4ddc2f7ed471067cd0072cb3caf329b4c0427e1ad828541f30017
+    regenerator-runtime: "npm:^0.14.0"
+  checksum: 10/6870e9e0e9125075b3aeba49a266f442b10820bfc693019eb6c1785c5a0edbe927e98b8238662cdcdba17842107c040386c3b69f39a0a3b217f9d00ffe685b27
   languageName: node
   linkType: hard
 
@@ -1518,22 +1518,22 @@ __metadata:
     "@types/argparse": "npm:2.0.16"
     "@types/cors": "npm:^2.8.12"
     "@types/express": "npm:^4.17.21"
-    "@types/express-serve-static-core": "npm:^4.19.1"
+    "@types/express-serve-static-core": "npm:^4.19.5"
     "@types/http-errors": "npm:2.0.4"
     "@types/lru-cache": "npm:^7.10.10"
     "@types/morgan": "npm:1.9.9"
     "@types/triple-beam": "npm:^1.3.5"
     argparse: "npm:^2.0.1"
-    confmgr: "npm:^1.0.10"
+    confmgr: "npm:^1.1.0"
     cors: "npm:^2.8.5"
     express: "npm:^4.19.2"
     express-winston: "npm:^4.2.0"
     http-errors: "npm:^2.0.0"
-    lru-cache: "npm:^10.2.2"
-    prom-client: "npm:^15.1.2"
+    lru-cache: "npm:^10.4.3"
+    prom-client: "npm:^15.1.3"
     rxjs: "npm:^7.8.1"
     ts-node-dev: "npm:^2.0.0"
-    winston: "npm:^3.13.0"
+    winston: "npm:^3.14.1"
   bin:
     substrate-api-sidecar: ./build/src/main.js
   languageName: unknown
@@ -1755,7 +1755,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/express-serve-static-core@npm:^4.19.1":
+"@types/express-serve-static-core@npm:^4.19.5":
   version: 4.19.5
   resolution: "@types/express-serve-static-core@npm:4.19.5"
   dependencies:
@@ -2761,15 +2761,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"confmgr@npm:^1.0.10":
-  version: 1.0.10
-  resolution: "confmgr@npm:1.0.10"
+"confmgr@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "confmgr@npm:1.1.0"
   dependencies:
-    "@babel/runtime": "npm:7.20.13"
+    "@babel/runtime": "npm:7.25.0"
     chalk: "npm:~4"
-    dotenv: "npm:16.0.3"
-    yaml: "npm:2.2.1"
-  checksum: 10/8079b86e91d132265e31364c0b74d8a0285c76c2c5af0c4c9c9250527767f7b960f02addb7935810fd907152a5c74003e7bcf737c1ad31fa8667e2fe8608bed2
+    dotenv: "npm:16.4.5"
+    yaml: "npm:2.5.0"
+  checksum: 10/d128950db986f9e768f6f00302dfb8df8c39478ae52ce3be7852922b69b77a6ede857decc1bab920184c9c3287f1cd905a631471a2236a017661cf0a2dd2aa9b
   languageName: node
   linkType: hard
 
@@ -3023,10 +3023,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dotenv@npm:16.0.3":
-  version: 16.0.3
-  resolution: "dotenv@npm:16.0.3"
-  checksum: 10/d6788c8e40b35ad9a9ca29249dccf37fa6b3ad26700fcbc87f2f41101bf914f5193a04e36a3d23de70b1dcb8e5d5a3b21e151debace2c4cd08d868be500a1b29
+"dotenv@npm:16.4.5":
+  version: 16.4.5
+  resolution: "dotenv@npm:16.4.5"
+  checksum: 10/55a3134601115194ae0f924e54473459ed0d9fc340ae610b676e248cca45aa7c680d86365318ea964e6da4e2ea80c4514c1adab5adb43d6867fb57ff068f95c8
   languageName: node
   linkType: hard
 
@@ -4950,7 +4950,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lru-cache@npm:^10.2.2":
+"lru-cache@npm:^10.4.3":
   version: 10.4.3
   resolution: "lru-cache@npm:10.4.3"
   checksum: 10/e6e90267360476720fa8e83cc168aa2bf0311f3f2eea20a6ba78b90a885ae72071d9db132f40fda4129c803e7dcec3a6b6a6fbb44ca90b081630b810b5d6a41a
@@ -5683,7 +5683,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prom-client@npm:^15.1.2":
+"prom-client@npm:^15.1.3":
   version: 15.1.3
   resolution: "prom-client@npm:15.1.3"
   dependencies:
@@ -5806,10 +5806,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"regenerator-runtime@npm:^0.13.11":
-  version: 0.13.11
-  resolution: "regenerator-runtime@npm:0.13.11"
-  checksum: 10/d493e9e118abef5b099c78170834f18540c4933cedf9bfabc32d3af94abfb59a7907bd7950259cbab0a929ebca7db77301e8024e5121e6482a82f78283dfd20c
+"regenerator-runtime@npm:^0.14.0":
+  version: 0.14.1
+  resolution: "regenerator-runtime@npm:0.14.1"
+  checksum: 10/5db3161abb311eef8c45bcf6565f4f378f785900ed3945acf740a9888c792f75b98ecb77f0775f3bf95502ff423529d23e94f41d80c8256e8fa05ed4b07cf471
   languageName: node
   linkType: hard
 
@@ -6833,7 +6833,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"winston@npm:^3.13.0":
+"winston@npm:^3.14.1":
   version: 3.14.2
   resolution: "winston@npm:3.14.2"
   dependencies:
@@ -6949,10 +6949,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yaml@npm:2.2.1":
-  version: 2.2.1
-  resolution: "yaml@npm:2.2.1"
-  checksum: 10/2e443fed323db4d5ae0c7134c6dbd30cb920e0c8f79a6ce78677731409af83ee2d74a09563fce01503a07f9a02274d42784d816f87294a53b47b955bc83dc655
+"yaml@npm:2.5.0":
+  version: 2.5.0
+  resolution: "yaml@npm:2.5.0"
+  bin:
+    yaml: bin.mjs
+  checksum: 10/72e903fdbe3742058885205db4a6c9ff38e5f497f4e05e631264f7756083c05e7d10dfb5e4ce9d7a95de95338f9b20d19dd0b91c60c65f7d7608b6b3929820ad
   languageName: node
   linkType: hard
 
