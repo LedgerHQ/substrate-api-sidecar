@@ -21,11 +21,6 @@
 
 <br /><br />
 
-## Note
-
-v1.0.0 was released on 2020-10-23. This major release introduced several renamed endpoints as breaking changes. It is important that users complete the transition to the new endpoints ASAP so they are ready for any subsequent emergency updates. Please visit the [MIGRATION_GUIDE](./guides/MIGRATION_GUIDE.md) to
-learn more.
-
 ## Prerequisites
 
 ### <= v15.0.0
@@ -256,12 +251,33 @@ You can also define a custom port by running :
 yarn start --prometheus --prometheus-port=<YOUR_CUSTOM_PORT>
 ```
 
+You can also expand the metrics tracking capabilities to include query params by running:
+
+```bash
+yarn start --prometheus --prometheus-queryparams
+```
+
 The metrics endpoint can then be accessed :
 - on the default port : `http://127.0.0.1:9100/metrics` or
 - on your custom port if you defined one : `http://127.0.0.1:<YOUR_CUSTOM_PORT>/metrics`
 
-That way you will have access to the default prometheus metrics and one extra custom metric called `sas_http_errors` (of type counter). This counter is increased by 1 every time an http error has occured in sidecar.
+A JSON format response is available at `http://127.0.0.1:9100/metrics.json`.
 
+That way you will have access to the default prometheus node instance metrics and the following metrics will be emitted for each route:
+
+- `sas_request_errors_total`: type counter and tracks http errors occuring in sidecar
+- `sas_request_success_total`: type counter and tracks successfull http requests
+- `sas_requests_total`: type counter and tracks all http requests
+- `sas_request_duration_seconds`: type histogram and tracks the latency of the requests
+- `sas_response_size_bytes_seconds`: type histogram and tracks the response size of the requests
+- `sas_response_size_latency_ratio_seconds`: type histogram and tracks the response bytes per second of the requests
+
+The blocks controller also includes the following route-specific metrics:
+
+- `sas_extrinsics_in_request_count`: type histogram and tracks the number of extrinsics returned in the request when a range of blocks is queried
+- `sas_extrinsics_per_second_count`: type histogram and tracks the returned extrinics per second
+- `sas_extrinsics_per_block_count`: type histogram and tracks the returned extrinsics per block
+- `sas_seconds_per_block_count`: type histogram and tracks the request time per block
 
 ## Debugging fee and staking payout calculations
 
@@ -331,8 +347,7 @@ All the commits in this repo follow the [Conventional Commits spec](https://www.
 
 ### Updating polkadot-js dependencies
 
-1. Every Monday the polkadot-js ecosystem will usually come out with a new release. It's important that we keep up,
-and read the release notes for any breaking changes or high priority updates. In order to update all the dependencies and resolutions run `yarn up "@polkadot/*"`.
+1. Whenever the polkadot-js ecosystem releases a new version, it's important to keep up with these updates and review the release notes for any breaking changes or high priority updates. In order to update all the dependencies and resolutions, create a new branch, such as `yourname-update-pjs`, and then run `yarn up "@polkadot/*"` in that branch.
 
     - @polkadot/api [release notes](https://github.com/polkadot-js/api/releases)
     - @polkadot/util-crypto [release notes](https://github.com/polkadot-js/common/releases)
@@ -349,9 +364,12 @@ and read the release notes for any breaking changes or high priority updates. In
    yarn test:latest-e2e-tests
    ```
 
-1. Commit the dependency updates with a name like `fix(deps): update pjs api` (title depending on what got updated, see commit history for other examples of this), and wait to get it merged.
+1. Commit the dependency updates with a name like `chore(deps): update polkadot-js deps` (adjust the title based on what was updated; refer to the commit history for examples). Then, wait for it to be merged.
 
 1. Follow [RELEASE.md](./RELEASE.md) next if you're working through a full sidecar release. This will involve creating a separate PR where the changelog and versions are bumped.
+
+### Maintenance Guide
+A more complete list of the maintainer's tasks can be found in the [MAINTENANCE.md](./guides/MAINTENANCE.md) guide.
 
 ## Hardware requirements
 
